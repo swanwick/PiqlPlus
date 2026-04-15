@@ -19,8 +19,8 @@ if [ -z "$NEW_HASH" ]; then
   exit 1
 fi
 
-# Extract current hash from repo index.html
-OLD_HASH=$(grep -oE '_components/v2/[a-f0-9]+\.js' "$REPO_DIR/index.html" | head -1 | grep -oE '[a-f0-9]{40}')
+# Extract current hash from repo index.html (|| true prevents set -e on no match)
+OLD_HASH=$(grep -oE '_components/v2/[a-f0-9]+\.js' "$REPO_DIR/index.html" | head -1 | grep -oE '[a-f0-9]{40}' || true)
 
 echo "    Current hash: ${OLD_HASH:-none}"
 echo "    Latest hash:  $NEW_HASH"
@@ -89,3 +89,23 @@ if [ -n "$OLD_HASH" ] && [ "$OLD_HASH" != "$NEW_HASH" ]; then
   rm -rf "$REPO_DIR/_components/v2/$OLD_HASH"
   echo "    Removed _components/v2/$OLD_HASH{.js,.css,/}"
 fi
+
+# Commit and push
+echo "==> Committing changes..."
+cd "$REPO_DIR"
+git add index.html _components/ _json/
+
+TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
+git commit -m "Sync from Figma Make ($TIMESTAMP)"
+
+echo "==> Pushing to GitHub..."
+git push origin HEAD:main
+
+echo ""
+echo "=============================="
+echo " Sync complete!"
+echo "=============================="
+echo " Old hash: $OLD_HASH"
+echo " New hash: $NEW_HASH"
+echo " Vercel:   https://vercel.com/swanwick/piqlplus"
+echo "=============================="
