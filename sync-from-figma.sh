@@ -32,3 +32,51 @@ if [ "$NEW_HASH" = "$OLD_HASH" ]; then
 fi
 
 echo "==> Changes detected. Starting sync..."
+
+# Extract bundleId (UUID) from the fetched index.html
+BUNDLE_ID=$(grep -oE '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}' "$TMP_INDEX" | head -1)
+
+if [ -z "$BUNDLE_ID" ]; then
+  echo "ERROR: Could not extract bundle ID from fetched index.html"
+  rm -f "$TMP_INDEX"
+  exit 1
+fi
+
+echo "    Bundle ID: $BUNDLE_ID"
+
+# Replace index.html
+mv "$TMP_INDEX" "$REPO_DIR/index.html"
+echo "==> Updated index.html"
+
+# Download new component JS and CSS
+echo "==> Downloading component JS..."
+curl -sf "$FIGMA_SITE/_components/v2/$NEW_HASH.js" \
+  -o "$REPO_DIR/_components/v2/$NEW_HASH.js"
+
+echo "==> Downloading component CSS..."
+curl -sf "$FIGMA_SITE/_components/v2/$NEW_HASH.css" \
+  -o "$REPO_DIR/_components/v2/$NEW_HASH.css"
+
+# Create assets directory and download images
+mkdir -p "$REPO_DIR/_components/v2/$NEW_HASH"
+
+echo "==> Extracting image assets from JS..."
+ASSET_PATHS=$(grep -oE "_components/v2/$NEW_HASH/[^\"' ]+" \
+  "$REPO_DIR/_components/v2/$NEW_HASH.js" | sort -u)
+
+ASSET_COUNT=0
+for ASSET_PATH in $ASSET_PATHS; do
+  FILENAME=$(basename "$ASSET_PATH")
+  echo "    Downloading $FILENAME..."
+  curl -sf "$FIGMA_SITE/$ASSET_PATH" \
+    -o "$REPO_DIR/_components/v2/$NEW_HASH/$FILENAME"
+  ASSET_COUNT=$((ASSET_COUNT + 1))
+done
+
+echo "    $ASSET_COUNT asset(s) downloaded"
+
+# Download updated bundle JSON
+echo "==> Downloading bundle JSON..."
+mkdir -p "$REPO_DIR/_json/$BUNDLE_ID"
+curl -sf "$FIGMA_SITE/_json/$BUNDLE_ID/_index.json" \
+  -o "$REPO_DIR/_json/$BUNDLE_ID/_index.json"
