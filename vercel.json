@@ -3,6 +3,10 @@
     {
       "source": "/_runtimes/:path*",
       "destination": "https://make-cover-77603485.figma.site/_runtimes/:path*"
+    },
+    {
+      "source": "/AlphaSurvey/_runtimes/:path*",
+      "destination": "https://emboss-reuse-71113277.figma.site/_runtimes/:path*"
     }
   ]
 }
