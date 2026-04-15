@@ -80,3 +80,12 @@ echo "==> Downloading bundle JSON..."
 mkdir -p "$REPO_DIR/_json/$BUNDLE_ID"
 curl -sf "$FIGMA_SITE/_json/$BUNDLE_ID/_index.json" \
   -o "$REPO_DIR/_json/$BUNDLE_ID/_index.json"
+
+# Remove old component files (only if hash actually changed and old hash is known)
+if [ -n "$OLD_HASH" ] && [ "$OLD_HASH" != "$NEW_HASH" ]; then
+  echo "==> Removing old component files..."
+  rm -f "$REPO_DIR/_components/v2/$OLD_HASH.js"
+  rm -f "$REPO_DIR/_components/v2/$OLD_HASH.css"
+  rm -rf "$REPO_DIR/_components/v2/$OLD_HASH"
+  echo "    Removed _components/v2/$OLD_HASH{.js,.css,/}"
+fi
