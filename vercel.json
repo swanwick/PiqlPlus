@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/_runtimes/:path*",
+      "destination": "https://make-cover-77603485.figma.site/_runtimes/:path*"
+    }
+  ]
+}
