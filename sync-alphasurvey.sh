@@ -46,10 +46,9 @@ fi
 
 echo "    Bundle ID: $BUNDLE_ID"
 
-# Rewrite root-relative paths to subpath-relative so assets load correctly at /AlphaSurvey
+# Only rewrite /_runtimes/ to subpath so Vercel routes it to the correct Figma CDN proxy.
+# _json and _components are stored at repo root (root-relative), matching how SitesRuntime fetches them.
 sed -i \
-  -e "s|/_components/|/$SUBPATH/_components/|g" \
-  -e "s|/_json/|/$SUBPATH/_json/|g" \
   -e "s|/_runtimes/|/$SUBPATH/_runtimes/|g" \
   "$TMP_INDEX"
 
@@ -58,53 +57,53 @@ mkdir -p "$DEST"
 mv "$TMP_INDEX" "$DEST/index.html"
 echo "==> Updated $SUBPATH/index.html"
 
-# Download new component JS and CSS
+# Download new component JS and CSS to repo root (runtime fetches from root-relative paths)
 echo "==> Downloading component JS..."
-mkdir -p "$DEST/_components/v2"
+mkdir -p "$REPO_DIR/_components/v2"
 curl -sf "$FIGMA_SITE/_components/v2/$NEW_HASH.js" \
-  -o "$DEST/_components/v2/$NEW_HASH.js"
+  -o "$REPO_DIR/_components/v2/$NEW_HASH.js"
 
 echo "==> Downloading component CSS..."
 curl -sf "$FIGMA_SITE/_components/v2/$NEW_HASH.css" \
-  -o "$DEST/_components/v2/$NEW_HASH.css"
+  -o "$REPO_DIR/_components/v2/$NEW_HASH.css"
 
 # Create assets directory and download images
-mkdir -p "$DEST/_components/v2/$NEW_HASH"
+mkdir -p "$REPO_DIR/_components/v2/$NEW_HASH"
 
 echo "==> Extracting image assets from JS..."
 ASSET_PATHS=$(grep -oE "_components/v2/$NEW_HASH/[^\"' ]+" \
-  "$DEST/_components/v2/$NEW_HASH.js" | sort -u)
+  "$REPO_DIR/_components/v2/$NEW_HASH.js" | sort -u)
 
 ASSET_COUNT=0
 for ASSET_PATH in $ASSET_PATHS; do
   FILENAME=$(basename "$ASSET_PATH")
   echo "    Downloading $FILENAME..."
   curl -sf "$FIGMA_SITE/$ASSET_PATH" \
-    -o "$DEST/_components/v2/$NEW_HASH/$FILENAME"
+    -o "$REPO_DIR/_components/v2/$NEW_HASH/$FILENAME"
   ASSET_COUNT=$((ASSET_COUNT + 1))
 done
 
 echo "    $ASSET_COUNT asset(s) downloaded"
 
-# Download updated bundle JSON
+# Download updated bundle JSON to repo root
 echo "==> Downloading bundle JSON..."
-mkdir -p "$DEST/_json/$BUNDLE_ID"
+mkdir -p "$REPO_DIR/_json/$BUNDLE_ID"
 curl -sf "$FIGMA_SITE/_json/$BUNDLE_ID/_index.json" \
-  -o "$DEST/_json/$BUNDLE_ID/_index.json"
+  -o "$REPO_DIR/_json/$BUNDLE_ID/_index.json"
 
-# Remove old component files
+# Remove old component files (at repo root)
 if [ -n "$OLD_HASH" ] && [ "$OLD_HASH" != "$NEW_HASH" ]; then
   echo "==> Removing old component files..."
-  rm -f "$DEST/_components/v2/$OLD_HASH.js"
-  rm -f "$DEST/_components/v2/$OLD_HASH.css"
-  rm -rf "$DEST/_components/v2/$OLD_HASH"
-  echo "    Removed $SUBPATH/_components/v2/$OLD_HASH{.js,.css,/}"
+  rm -f "$REPO_DIR/_components/v2/$OLD_HASH.js"
+  rm -f "$REPO_DIR/_components/v2/$OLD_HASH.css"
+  rm -rf "$REPO_DIR/_components/v2/$OLD_HASH"
+  echo "    Removed _components/v2/$OLD_HASH{.js,.css,/}"
 fi
 
 # Commit and push
 echo "==> Committing changes..."
 cd "$REPO_DIR"
-git add "$SUBPATH/"
+git add "$SUBPATH/" _components/ _json/
 
 TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
 git commit -m "Sync AlphaSurvey from Figma Make ($TIMESTAMP)"
