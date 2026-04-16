@@ -1,4 +1,4 @@
-const M = () => Promise.resolve().then(() => L), { Fragment: j, jsx: e, jsxs: t } = globalThis.__GLOBALS__.ReactJSXRuntime;
+const M = () => Promise.resolve().then(() => I), { Fragment: j, jsx: e, jsxs: t } = globalThis.__GLOBALS__.ReactJSXRuntime;
 "use" in globalThis.__GLOBALS__.React || (globalThis.__GLOBALS__.React.use = () => {
   throw new Error("`use` is not available in this version of React. Make currently only supports React 18, but `use` is only available in React 19+.");
 });
@@ -7,7 +7,7 @@ globalThis.__GLOBALS__.React.cloneElement;
 ({
   ...globalThis.__GLOBALS__.React
 });
-const { Component: O, createContext: V, createElement: b, createFactory: W, createRef: U, forwardRef: g, Fragment: H, isValidElement: z, lazy: G, memo: q, Profiler: $, PureComponent: D, startTransition: Y, StrictMode: X, Suspense: Z, use: K, useCallback: J, useContext: Q, useDebugValue: ee, useDeferredValue: te, useEffect: N, useId: ae, useImperativeHandle: le, useInsertionEffect: se, useLayoutEffect: re, useMemo: oe, useReducer: ie, useRef: ne, useState: x, useSyncExternalStore: de, useTransition: ce, version: me, __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED: he } = globalThis.__GLOBALS__.React, u = "/_components/v2/56ba01bfcdb1ae66396509fffc460c41b301ded1/PiqlPlus_Logo_150px_height.e5db322b.png", v = "/_components/v2/56ba01bfcdb1ae66396509fffc460c41b301ded1/Private_Pickle_Cleaned_Up.aada27fe.png", k = "/_components/v2/56ba01bfcdb1ae66396509fffc460c41b301ded1/image-2.1a115305.png";
+const { Component: W, createContext: O, createElement: b, createFactory: H, createRef: V, forwardRef: g, Fragment: U, isValidElement: z, lazy: q, memo: G, Profiler: $, PureComponent: D, startTransition: Y, StrictMode: X, Suspense: Z, use: K, useCallback: J, useContext: Q, useDebugValue: ee, useDeferredValue: te, useEffect: N, useId: ae, useImperativeHandle: le, useInsertionEffect: se, useLayoutEffect: re, useMemo: oe, useReducer: ie, useRef: ne, useState: x, useSyncExternalStore: de, useTransition: ce, version: me, __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED: he } = globalThis.__GLOBALS__.React, p = "/_components/v2/7294f56315250a5696eed6388b3a0e76ed22b206/PiqlPlus_Logo_150px_height.e5db322b.png", v = "/_components/v2/7294f56315250a5696eed6388b3a0e76ed22b206/Private_Pickle_Cleaned_Up.aada27fe.png", k = "/_components/v2/7294f56315250a5696eed6388b3a0e76ed22b206/image-2.1a115305.png";
 /**
  * @license lucide-react v0.487.0 - ISC
  *
@@ -17,7 +17,7 @@ const { Component: O, createContext: V, createElement: b, createFactory: W, crea
 const C = (a) => a.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase(), A = (a) => a.replace(
   /^([A-Z])|[\s-_]+(\w)/g,
   (l, s, o) => o ? o.toUpperCase() : s.toLowerCase()
-), p = (a) => {
+), u = (a) => {
   const l = A(a);
   return l.charAt(0).toUpperCase() + l.slice(1);
 }, y = (...a) => a.filter((l, s, o) => !!l && l.trim() !== "" && o.indexOf(l) === s).join(" ").trim();
@@ -84,14 +84,14 @@ const f = (a, l) => {
       ref: i,
       iconNode: l,
       className: y(
-        `lucide-${C(p(a))}`,
+        `lucide-${C(u(a))}`,
         `lucide-${a}`,
         o
       ),
       ...r
     })
   );
-  return s.displayName = p(a), s;
+  return s.displayName = u(a), s;
 };
 /**
  * @license lucide-react v0.487.0 - ISC
@@ -99,7 +99,7 @@ const f = (a, l) => {
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const P = [["path", { d: "m6 9 6 6 6-6", key: "qrunsl" }]], _ = f("chevron-down", P);
+const _ = [["path", { d: "m6 9 6 6 6-6", key: "qrunsl" }]], P = f("chevron-down", _);
 /**
  * @license lucide-react v0.487.0 - ISC
  *
@@ -117,11 +117,11 @@ const T = [
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const S = [
+const E = [
   ["path", { d: "M18 6 6 18", key: "1bl5f8" }],
   ["path", { d: "m6 6 12 12", key: "d8bk6v" }]
-], E = f("x", S);
-function I() {
+], L = f("x", E);
+function S() {
   const [a, l] = x(""), [s, o] = x(!1);
   N(() => {
     const i = () => {
@@ -141,13 +141,13 @@ function I() {
     /* @__PURE__ */ t("nav", { className: "fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm", children: [
       /* @__PURE__ */ e("div", { className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8", children: /* @__PURE__ */ t("div", { className: "flex items-center justify-between h-20", children: [
         /* @__PURE__ */ t("div", { className: "flex items-center gap-12", children: [
-          /* @__PURE__ */ e("img", { src: u, alt: "PiqlPlus", className: "h-16" }),
+          /* @__PURE__ */ e("img", { src: p, alt: "PiqlPlus", className: "h-16" }),
           /* @__PURE__ */ t("div", { className: "hidden lg:flex items-center gap-8", children: [
             /* @__PURE__ */ t(
               "button",
               {
                 onClick: () => r("private-pickle"),
-                className: `text-sm font-semibold tracking-wide transition-colors pb-1 border-b-2 ${a === "private-pickle" ? "border-[#001f3f]" : "border-transparent"}`,
+                className: `text-sm font-semibold tracking-wide transition-colors pb-1 border-b-2 ${a === "private-pickle" ? "border-[#001f3f]" : "border-transparent hover:border-[#001f3f]"}`,
                 children: [
                   /* @__PURE__ */ e("span", { className: "text-[#001f3f]", children: "PRIVATE" }),
                   /* @__PURE__ */ e("span", { className: "text-[#8BC34A]", children: "PICKLE" })
@@ -158,7 +158,7 @@ function I() {
               "button",
               {
                 onClick: () => r("pickle-vacations"),
-                className: `text-sm font-semibold tracking-wide transition-colors pb-1 border-b-2 ${a === "pickle-vacations" ? "text-[#ff6b6b] border-[#ff6b6b]" : "text-[#001f3f] hover:text-[#ff6b6b] border-transparent"}`,
+                className: `text-sm font-semibold tracking-wide transition-colors pb-1 border-b-2 ${a === "pickle-vacations" ? "text-[#ff6b6b] border-[#ff6b6b]" : "text-[#001f3f] hover:text-[#ff6b6b] border-transparent hover:border-[#ff6b6b]"}`,
                 children: "PICKLE VACATIONS"
               }
             ),
@@ -166,7 +166,7 @@ function I() {
               "button",
               {
                 onClick: () => r("swupr-leagues"),
-                className: `text-sm font-semibold tracking-wide transition-colors pb-1 border-b-2 ${a === "swupr-leagues" ? "text-[#FFC107] border-[#FFC107]" : "text-[#001f3f] hover:text-[#FFC107] border-transparent"}`,
+                className: `text-sm font-semibold tracking-wide transition-colors pb-1 border-b-2 ${a === "swupr-leagues" ? "text-[#FFC107] border-[#FFC107]" : "text-[#001f3f] hover:text-[#FFC107] border-transparent hover:border-[#FFC107]"}`,
                 children: "SWUPR LEAGUES"
               }
             ),
@@ -174,7 +174,7 @@ function I() {
               "button",
               {
                 onClick: () => r("about-swan"),
-                className: `text-sm font-semibold tracking-wide transition-colors pb-1 border-b-2 ${a === "about-swan" ? "text-[#001f3f] border-[#001f3f]" : "text-[#001f3f] hover:text-[#001f3f] border-transparent"}`,
+                className: `text-sm font-semibold tracking-wide transition-colors pb-1 border-b-2 ${a === "about-swan" ? "text-[#001f3f] border-[#001f3f]" : "text-[#001f3f] hover:text-[#001f3f] border-transparent hover:border-[#001f3f]"}`,
                 children: "ABOUT SWAN"
               }
             )
@@ -185,7 +185,7 @@ function I() {
           {
             onClick: () => o(!s),
             className: "lg:hidden text-[#001f3f] p-2",
-            children: s ? /* @__PURE__ */ e(E, { size: 24 }) : /* @__PURE__ */ e(R, { size: 24 })
+            children: s ? /* @__PURE__ */ e(L, { size: 24 }) : /* @__PURE__ */ e(R, { size: 24 })
           }
         )
       ] }) }),
@@ -228,12 +228,12 @@ function I() {
         )
       ] }) })
     ] }),
-    /* @__PURE__ */ t("section", { className: "relative pt-32 pb-24 px-4 overflow-hidden bg-gradient-to-b from-white to-gray-50", children: [
+    /* @__PURE__ */ t("section", { className: "relative min-h-screen flex items-center justify-center px-4 overflow-hidden bg-gradient-to-b from-white to-gray-50", children: [
       /* @__PURE__ */ t("div", { className: "absolute inset-0 opacity-5", children: [
         /* @__PURE__ */ e("div", { className: "absolute top-20 left-10 w-96 h-96 bg-[#8BC34A] rounded-full blur-[120px]" }),
         /* @__PURE__ */ e("div", { className: "absolute bottom-20 right-10 w-96 h-96 bg-[#001f3f] rounded-full blur-[120px]" })
       ] }),
-      /* @__PURE__ */ e("div", { className: "max-w-7xl mx-auto relative z-10", children: /* @__PURE__ */ t("div", { className: "text-center", children: [
+      /* @__PURE__ */ e("div", { className: "max-w-7xl mx-auto relative z-10 py-20", children: /* @__PURE__ */ t("div", { className: "text-center", children: [
         /* @__PURE__ */ t(
           "h1",
           {
@@ -254,50 +254,50 @@ function I() {
             className: "inline-flex items-center gap-2 px-8 py-4 bg-[#8BC34A] text-white font-bold text-lg rounded-full hover:bg-[#7CB342] transition-all hover:scale-105 shadow-lg",
             children: [
               "EXPLORE NOW",
-              /* @__PURE__ */ e(_, { size: 20 })
+              /* @__PURE__ */ e(P, { size: 20 })
             ]
           }
         )
       ] }) })
     ] }),
     /* @__PURE__ */ e("section", { id: "private-pickle", className: "py-24 px-4 bg-white", children: /* @__PURE__ */ t("div", { className: "max-w-7xl mx-auto", children: [
-      /* @__PURE__ */ t("div", { className: "flex items-center gap-4 mb-12", children: [
-        /* @__PURE__ */ e("img", { src: v, alt: "Private Pickle", className: "h-20" }),
-        /* @__PURE__ */ t("h2", { className: "text-6xl sm:text-7xl lg:text-8xl", style: { fontFamily: "Bebas Neue, sans-serif" }, children: [
+      /* @__PURE__ */ t("div", { className: "flex items-center gap-2 sm:gap-4 mb-12", children: [
+        /* @__PURE__ */ e("img", { src: v, alt: "Private Pickle", className: "h-12 sm:h-16 md:h-20 flex-shrink-0" }),
+        /* @__PURE__ */ t("h2", { className: "text-4xl sm:text-6xl md:text-7xl lg:text-8xl", style: { fontFamily: "Bebas Neue, sans-serif" }, children: [
           /* @__PURE__ */ e("span", { className: "text-[#001f3f]", children: "PRIVATE" }),
           /* @__PURE__ */ e("span", { className: "text-[#8BC34A]", children: "PICKLE" })
         ] })
       ] }),
-      /* @__PURE__ */ e("div", { id: "who-its-for", className: "mb-20 scroll-mt-24", children: /* @__PURE__ */ t("div", { className: "bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 sm:p-12 border border-gray-200 shadow-sm", children: [
+      /* @__PURE__ */ e("div", { id: "who-its-for", className: "mb-20 scroll-mt-24", children: /* @__PURE__ */ t("div", { className: "bg-gradient-to-br from-[#8BC34A]/15 to-[#8BC34A]/5 rounded-3xl p-8 sm:p-12 border border-[#8BC34A]/20 shadow-sm", children: [
         /* @__PURE__ */ e("h3", { className: "text-3xl sm:text-4xl font-bold text-[#001f3f] mb-6", style: { fontFamily: "Bebas Neue, sans-serif" }, children: "Who It's For" }),
         /* @__PURE__ */ e("p", { className: "text-lg text-gray-700 leading-relaxed mb-6", children: "Anyone who has struggled with putting together their own private pickleball games.  The app helps you collect all your pickleball contacts and find more players through your friends. It does all the text sending and RSVP management for you." }),
         /* @__PURE__ */ e("p", { className: "text-lg text-gray-700 leading-relaxed mb-6", children: "Automatically sends the first invites to the players you most want in your game." }),
         /* @__PURE__ */ t("p", { className: "text-lg text-gray-700 leading-relaxed", children: [
           "If you would like to try it, taking a 2 minute ",
-          /* @__PURE__ */ e("span", { className: "text-[#8BC34A] font-semibold", children: "Pre sign-up survey" }),
+          /* @__PURE__ */ e("a", { href: "https://piqlplus.com/AlphaSurvey", className: "text-[#8BC34A] font-semibold hover:text-[#7CB342] hover:underline transition-colors cursor-pointer", children: "Pre sign-up survey" }),
           " will get you a free account."
         ] })
       ] }) }),
       /* @__PURE__ */ e("div", { id: "alpha-test", className: "mb-20 scroll-mt-24", children: /* @__PURE__ */ t("div", { className: "grid md:grid-cols-2 gap-8", children: [
-        /* @__PURE__ */ t("div", { className: "bg-gradient-to-br from-[#8BC34A]/10 to-white rounded-3xl p-8 sm:p-12 border border-[#8BC34A]/30 shadow-sm", children: [
+        /* @__PURE__ */ t("div", { className: "bg-gradient-to-br from-[#8BC34A]/20 to-[#8BC34A]/5 rounded-3xl p-8 sm:p-12 border border-[#8BC34A]/30 shadow-sm", children: [
           /* @__PURE__ */ e("h3", { className: "text-3xl sm:text-4xl font-bold text-[#8BC34A] mb-6", style: { fontFamily: "Bebas Neue, sans-serif" }, children: "Alpha Test Status" }),
-          /* @__PURE__ */ e("p", { className: "text-lg text-gray-700 leading-relaxed mb-6", children: "We are currently in Alpha Testing. This means that there are likely to be bugs and there are likely to be changes to the code during the Alpha phase. Alpha testers are encouraged to point out bugs and to make feature requests." }),
-          /* @__PURE__ */ e("p", { className: "text-lg text-gray-700 leading-relaxed", children: "Alpha Registration is currently open to anyone willing to take a 2 minute Pre sign-up survey. The registrations may be capped at any time." })
+          /* @__PURE__ */ e("p", { className: "text-lg text-gray-700 leading-relaxed mb-6", children: "We are currently in Alpha Testing. This means that there will be bugs and there will be changes to the app during the Alpha phase. Alpha testers are encouraged to point out bugs and to make feature requests. We will fix problems and seek to improve the app before we get to a wider Beta." }),
+          /* @__PURE__ */ e("p", { className: "text-lg text-gray-700 leading-relaxed", children: "You can use the Bug or Lightbulb icons from the profile page within the app or come here and click on the appropriate link for what you want to report." })
         ] }),
         /* @__PURE__ */ t("div", { className: "space-y-8", children: [
-          /* @__PURE__ */ t("div", { className: "bg-white rounded-3xl p-8 border border-gray-200 hover:border-[#ff6b6b]/50 transition-all shadow-sm hover:shadow-md", children: [
+          /* @__PURE__ */ t("div", { className: "bg-gradient-to-br from-[#8BC34A]/10 to-white rounded-3xl p-8 border border-[#8BC34A]/20 hover:border-[#8BC34A]/40 transition-all shadow-sm hover:shadow-md", children: [
             /* @__PURE__ */ e("h4", { className: "text-2xl font-bold text-[#001f3f] mb-4", style: { fontFamily: "Bebas Neue, sans-serif" }, children: "Bug Report" }),
             /* @__PURE__ */ e("p", { className: "text-gray-700 leading-relaxed mb-4", children: "This is an Alpha test so we expect to find plenty of bugs or even things that are confusing. It would be super-helpful if you would report issues that you find so we can quickly correct them and make the app stable enough for a much broader beta." }),
             /* @__PURE__ */ e("button", { className: "px-6 py-3 bg-[#ff6b6b] text-white font-semibold rounded-full hover:bg-[#ff5252] transition-all shadow-sm hover:shadow", children: "Report a Bug" })
           ] }),
-          /* @__PURE__ */ t("div", { className: "bg-white rounded-3xl p-8 border border-gray-200 hover:border-[#FFC107]/50 transition-all shadow-sm hover:shadow-md", children: [
+          /* @__PURE__ */ t("div", { className: "bg-gradient-to-br from-[#8BC34A]/5 to-white rounded-3xl p-8 border border-[#8BC34A]/20 hover:border-[#8BC34A]/40 transition-all shadow-sm hover:shadow-md", children: [
             /* @__PURE__ */ e("h4", { className: "text-2xl font-bold text-[#001f3f] mb-4", style: { fontFamily: "Bebas Neue, sans-serif" }, children: "Feature Request" }),
             /* @__PURE__ */ e("p", { className: "text-gray-700 leading-relaxed mb-4", children: "The Private Pickle team is small and nimble. We have ideas about the direction that we are going to take the app, but we don't know everything about what you need. If you tell us, we will factor it into the Product Roadmap." }),
             /* @__PURE__ */ e("button", { className: "px-6 py-3 bg-[#FFC107] text-[#001f3f] font-semibold rounded-full hover:bg-[#FFB300] transition-all shadow-sm hover:shadow", children: "Make a Request" })
           ] })
         ] })
       ] }) }),
-      /* @__PURE__ */ e("div", { id: "pricing", className: "scroll-mt-24", children: /* @__PURE__ */ t("div", { className: "bg-gradient-to-br from-[#8BC34A]/20 to-white rounded-3xl p-8 sm:p-12 border border-[#8BC34A]/30 shadow-sm", children: [
+      /* @__PURE__ */ e("div", { id: "pricing", className: "scroll-mt-24", children: /* @__PURE__ */ t("div", { className: "bg-gradient-to-br from-[#8BC34A]/15 to-[#8BC34A]/5 rounded-3xl p-8 sm:p-12 border border-[#8BC34A]/30 shadow-sm", children: [
         /* @__PURE__ */ e("h3", { className: "text-3xl sm:text-4xl font-bold text-[#8BC34A] mb-6", style: { fontFamily: "Bebas Neue, sans-serif" }, children: "Pricing" }),
         /* @__PURE__ */ e("p", { className: "text-2xl text-[#001f3f] font-semibold mb-4", children: "During Alpha Test, Private Pickle is free for all." }),
         /* @__PURE__ */ e("p", { className: "text-lg text-gray-700 leading-relaxed", children: "In future phases, it will likely remain free for the event owners who do all the work. The plan is to have a small subscription fee for RSVPers who are receiving the benefit more than a few times a month." })
@@ -312,7 +312,7 @@ function I() {
           children: "PICKLE VACATIONS"
         }
       ),
-      /* @__PURE__ */ e("div", { id: "concept", className: "mb-20 scroll-mt-24", children: /* @__PURE__ */ t("div", { className: "bg-white rounded-3xl p-8 sm:p-12 border border-gray-200 shadow-sm", children: [
+      /* @__PURE__ */ e("div", { id: "concept", className: "mb-20 scroll-mt-24", children: /* @__PURE__ */ t("div", { className: "bg-gradient-to-br from-[#ff6b6b]/15 to-[#ff6b6b]/5 rounded-3xl p-8 sm:p-12 border border-[#ff6b6b]/20 shadow-sm", children: [
         /* @__PURE__ */ e("h3", { className: "text-3xl sm:text-4xl font-bold text-[#001f3f] mb-6", style: { fontFamily: "Bebas Neue, sans-serif" }, children: "The Concept" }),
         /* @__PURE__ */ e("p", { className: "text-lg text-gray-700 leading-relaxed", children: "Pickle Vacations are a natural extension of the pickleball lifestyle. They are designed for a group of people to see another part of the world while remaining active and social. There is a great mix of pickleball, sightseeing, relaxing. There are alternate activity options so that non-pickleball spouses can come and also enjoy themselves. You can also always opt-out of any of the activities if you prefer some time on your own." })
       ] }) }),
@@ -342,23 +342,23 @@ function I() {
           }
         ) })
       ] }) }),
-      /* @__PURE__ */ e("div", { id: "next-trip", className: "mb-20 scroll-mt-24", children: /* @__PURE__ */ t("div", { className: "bg-gradient-to-br from-[#ff6b6b]/10 to-white rounded-3xl p-8 sm:p-12 border border-[#ff6b6b]/30 shadow-sm", children: [
+      /* @__PURE__ */ e("div", { id: "next-trip", className: "mb-20 scroll-mt-24", children: /* @__PURE__ */ t("div", { className: "bg-gradient-to-br from-[#ff6b6b]/20 to-[#ff6b6b]/5 rounded-3xl p-8 sm:p-12 border border-[#ff6b6b]/30 shadow-sm", children: [
         /* @__PURE__ */ e("h3", { className: "text-3xl sm:text-4xl font-bold text-[#ff6b6b] mb-6", style: { fontFamily: "Bebas Neue, sans-serif" }, children: "Next Trip: Hoi An, Vietnam" }),
         /* @__PURE__ */ e("p", { className: "text-xl text-[#001f3f] font-semibold mb-6", children: "Late Fall 2026" }),
         /* @__PURE__ */ e("p", { className: "text-lg text-gray-700 leading-relaxed mb-6", children: "Our next trip is in late Fall 2026 to Hoi An, Vietnam. This is a very safe tourist friendly town in Central Vietnam. There is beach, culture, shopping, spas, food, and of course pickleball. Vietnam is growing pickleball faster than the US. At the Asia PPA tournament in April two Vietnamese men beat all the US pros to play in the Men's singles finals. There is plenty of great pickleball talent." }),
         /* @__PURE__ */ t("div", { className: "grid sm:grid-cols-2 gap-6 mb-8", children: [
-          /* @__PURE__ */ t("div", { className: "bg-white rounded-2xl p-6 border border-gray-200 shadow-sm", children: [
+          /* @__PURE__ */ t("div", { className: "bg-gradient-to-br from-[#ff6b6b]/10 to-white rounded-2xl p-6 border border-[#ff6b6b]/20 shadow-sm", children: [
             /* @__PURE__ */ e("h4", { className: "text-xl font-bold text-[#ff6b6b] mb-3", style: { fontFamily: "Bebas Neue, sans-serif" }, children: "Pickleball Program" }),
             /* @__PURE__ */ e("p", { className: "text-gray-700", children: "Five 3-hour sessions including lessons and free play. Week concludes with a tournament mixing in local talent at your level." })
           ] }),
-          /* @__PURE__ */ t("div", { className: "bg-white rounded-2xl p-6 border border-gray-200 shadow-sm", children: [
+          /* @__PURE__ */ t("div", { className: "bg-gradient-to-br from-[#ff6b6b]/5 to-white rounded-2xl p-6 border border-[#ff6b6b]/20 shadow-sm", children: [
             /* @__PURE__ */ e("h4", { className: "text-xl font-bold text-[#ff6b6b] mb-3", style: { fontFamily: "Bebas Neue, sans-serif" }, children: "Cultural Experience" }),
             /* @__PURE__ */ e("p", { className: "text-gray-700", children: "Planned tourist excursions, cultural shows, meals, shopping, and exploring local culture. Restaurants $10-15, Pho just $2!" })
           ] })
         ] }),
         /* @__PURE__ */ e("p", { className: "text-gray-700 leading-relaxed", children: "There will be options for 3 or 4 star accommodations and we will aim to pair singles into double occupancy rooms if they want to save money." })
       ] }) }),
-      /* @__PURE__ */ e("div", { id: "request-info", className: "scroll-mt-24", children: /* @__PURE__ */ t("div", { className: "bg-white rounded-3xl p-8 sm:p-12 border border-gray-200 text-center shadow-sm", children: [
+      /* @__PURE__ */ e("div", { id: "request-info", className: "scroll-mt-24", children: /* @__PURE__ */ t("div", { className: "bg-gradient-to-br from-[#ff6b6b]/10 to-white rounded-3xl p-8 sm:p-12 border border-[#ff6b6b]/20 text-center shadow-sm", children: [
         /* @__PURE__ */ e("h3", { className: "text-3xl sm:text-4xl font-bold text-[#001f3f] mb-6", style: { fontFamily: "Bebas Neue, sans-serif" }, children: "Request Information" }),
         /* @__PURE__ */ e("p", { className: "text-lg text-gray-700 leading-relaxed mb-8 max-w-3xl mx-auto", children: "While we do have an itinerary and pricing in mind, we are not publishing it yet because we are hoping to hear feedback from those who are interested. If you are interested, we will send you what we are currently thinking and you can tell us what you like about it and what you would change." }),
         /* @__PURE__ */ e("button", { className: "px-8 py-4 bg-[#ff6b6b] text-white font-bold text-lg rounded-full hover:bg-[#ff5252] transition-all hover:scale-105 shadow-lg hover:shadow-xl", children: "I'M INTERESTED" })
@@ -373,22 +373,22 @@ function I() {
           children: "SWUPR LEAGUES"
         }
       ),
-      /* @__PURE__ */ e("div", { id: "how-it-works", className: "mb-20 scroll-mt-24", children: /* @__PURE__ */ t("div", { className: "bg-gradient-to-br from-[#FFC107]/10 to-white rounded-3xl p-8 sm:p-12 border border-[#FFC107]/30 shadow-sm", children: [
+      /* @__PURE__ */ e("div", { id: "how-it-works", className: "mb-20 scroll-mt-24", children: /* @__PURE__ */ t("div", { className: "bg-gradient-to-br from-[#FFC107]/20 to-[#FFC107]/5 rounded-3xl p-8 sm:p-12 border border-[#FFC107]/30 shadow-sm", children: [
         /* @__PURE__ */ e("h3", { className: "text-3xl sm:text-4xl font-bold text-[#FFC107] mb-6", style: { fontFamily: "Bebas Neue, sans-serif" }, children: "How It Works" }),
         /* @__PURE__ */ e("p", { className: "text-lg text-gray-700 leading-relaxed mb-6", children: "Many people dislike DUPR. It can do some unexpected things with your rating. The main reason for this is that it does not get enough data. A very small number of each player's matches end up in the DUPR system so it is not a great reflection on the actual play." }),
         /* @__PURE__ */ e("p", { className: "text-lg text-gray-700 leading-relaxed mb-6", children: "SWUPR (short for Swan DUPR) is designed to take all your regular play and give you DUPR-like results. It shows you not only who was king of the court that day, but maybe the person who didn't win the most games, actually did much better than their rating and they can feel great about that. If you have a bunch of regular players, it will sort them into a ladder and show you who is moving up and down each week. It can handle multiple different groups and even different formats of playing." }),
         /* @__PURE__ */ e("p", { className: "text-lg text-gray-700 leading-relaxed", children: "The underlying tech is just Google Docs with some Javascript on top that lets it work sort of like a database with an entry layer and a reporting layer. For anyone who wants to use it, I will just make a copy that you can own. Please note: this is not a product priority for me so unless it takes off like wildfire, I am not likely to provide much ongoing upgrades or support." })
       ] }) }),
       /* @__PURE__ */ t("div", { className: "grid md:grid-cols-2 gap-8", children: [
-        /* @__PURE__ */ e("div", { id: "admin-guide", className: "scroll-mt-24", children: /* @__PURE__ */ t("div", { className: "bg-white rounded-3xl p-8 border border-gray-200 h-full shadow-sm", children: [
+        /* @__PURE__ */ e("div", { id: "admin-guide", className: "scroll-mt-24", children: /* @__PURE__ */ t("div", { className: "bg-gradient-to-br from-[#FFC107]/15 to-[#FFC107]/5 rounded-3xl p-8 border border-[#FFC107]/20 h-full shadow-sm", children: [
           /* @__PURE__ */ e("h3", { className: "text-2xl sm:text-3xl font-bold text-[#001f3f] mb-6", style: { fontFamily: "Bebas Neue, sans-serif" }, children: "Admin Guide" }),
           /* @__PURE__ */ e("p", { className: "text-gray-700 leading-relaxed mb-6", children: "The guide to how to use the product is here." }),
-          /* @__PURE__ */ e("button", { className: "px-6 py-3 bg-[#FFC107] text-[#001f3f] font-semibold rounded-full hover:bg-[#FFB300] transition-all shadow-sm hover:shadow", children: "View Guide" })
+          /* @__PURE__ */ e("a", { href: "https://docs.google.com/document/d/1XRkrtBWHE_1fbxf7Hlu1tI1zg3ajmaWeUEiKzwcJ-oo/edit?tab=t.0#heading=h.6auecb20rgp0", target: "_blank", rel: "noopener noreferrer", className: "inline-block px-6 py-3 bg-[#FFC107] text-[#001f3f] font-semibold rounded-full hover:bg-[#FFB300] transition-all shadow-sm hover:shadow", children: "View Guide" })
         ] }) }),
-        /* @__PURE__ */ e("div", { id: "become-admin", className: "scroll-mt-24", children: /* @__PURE__ */ t("div", { className: "bg-white rounded-3xl p-8 border border-gray-200 h-full shadow-sm", children: [
+        /* @__PURE__ */ e("div", { id: "become-admin", className: "scroll-mt-24", children: /* @__PURE__ */ t("div", { className: "bg-gradient-to-br from-[#FFC107]/10 to-white rounded-3xl p-8 border border-[#FFC107]/20 h-full shadow-sm", children: [
           /* @__PURE__ */ e("h3", { className: "text-2xl sm:text-3xl font-bold text-[#001f3f] mb-6", style: { fontFamily: "Bebas Neue, sans-serif" }, children: "Become an Admin" }),
           /* @__PURE__ */ e("p", { className: "text-gray-700 leading-relaxed mb-6", children: "If you are interested in learning more and/or getting a copy, please fill in this info request." }),
-          /* @__PURE__ */ e("button", { className: "px-6 py-3 bg-[#FFC107] text-[#001f3f] font-semibold rounded-full hover:bg-[#FFB300] transition-all shadow-sm hover:shadow", children: "Request Info" })
+          /* @__PURE__ */ e("a", { href: "https://forms.gle/su4LHn95qcc4GgJ67", target: "_blank", rel: "noopener noreferrer", className: "inline-block px-6 py-3 bg-[#FFC107] text-[#001f3f] font-semibold rounded-full hover:bg-[#FFB300] transition-all shadow-sm hover:shadow", children: "Request Access" })
         ] }) })
       ] })
     ] }) }),
@@ -405,7 +405,7 @@ function I() {
         }
       ),
       /* @__PURE__ */ t("div", { className: "grid md:grid-cols-2 gap-8", children: [
-        /* @__PURE__ */ t("div", { className: "bg-gradient-to-br from-[#8BC34A]/10 to-white rounded-3xl p-8 sm:p-12 border border-[#8BC34A]/30 shadow-sm", children: [
+        /* @__PURE__ */ t("div", { className: "bg-gradient-to-br from-[#001f3f]/15 to-[#001f3f]/5 rounded-3xl p-8 sm:p-12 border border-[#001f3f]/20 shadow-sm", children: [
           /* @__PURE__ */ e("h3", { className: "text-3xl font-bold text-[#001f3f] mb-6", style: { fontFamily: "Bebas Neue, sans-serif" }, children: "Pickleball Coaching" }),
           /* @__PURE__ */ t("div", { className: "bg-white rounded-2xl shadow-xl max-w-[320px] mx-auto overflow-hidden", children: [
             /* @__PURE__ */ e("div", { className: "relative h-20 overflow-hidden bg-white rounded-t-2xl", children: /* @__PURE__ */ t("svg", { viewBox: "0 0 400 120", className: "w-full h-full rounded-t-2xl", preserveAspectRatio: "none", children: [
@@ -426,21 +426,21 @@ function I() {
             ] })
           ] })
         ] }),
-        /* @__PURE__ */ t("div", { className: "bg-gradient-to-br from-[#ff6b6b]/10 to-white rounded-3xl p-8 sm:p-12 border border-[#ff6b6b]/30 shadow-sm", children: [
+        /* @__PURE__ */ t("div", { className: "bg-gradient-to-br from-[#001f3f]/10 to-white rounded-3xl p-8 sm:p-12 border border-[#001f3f]/20 shadow-sm", children: [
           /* @__PURE__ */ e("h3", { className: "text-3xl font-bold text-[#001f3f] mb-6", style: { fontFamily: "Bebas Neue, sans-serif" }, children: "Travels" }),
           /* @__PURE__ */ e("p", { className: "text-lg text-gray-700 leading-relaxed", children: "Combining a passion for pickleball with exploration, bringing unique vacation experiences to players worldwide." })
         ] })
       ] })
     ] }) }),
     /* @__PURE__ */ e("footer", { className: "py-12 px-4 bg-white border-t border-gray-200", children: /* @__PURE__ */ t("div", { className: "max-w-7xl mx-auto text-center", children: [
-      /* @__PURE__ */ e("img", { src: u, alt: "PiqlPlus", className: "h-16 mx-auto mb-6" }),
+      /* @__PURE__ */ e("img", { src: p, alt: "PiqlPlus", className: "h-16 mx-auto mb-6" }),
       /* @__PURE__ */ e("p", { className: "text-gray-600", children: "© 2026 PiqlPlus. All rights reserved." })
     ] }) })
   ] });
 }
-const L = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const I = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: I
+  default: S
 }, Symbol.toStringTag, { value: "Module" }));
 export {
   M as Code0_8
