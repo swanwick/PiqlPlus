@@ -65,15 +65,22 @@ ASSET_PATHS=$(grep -oE "_components/v2/$NEW_HASH/[^\"' ]+" \
   "$REPO_DIR/_components/v2/$NEW_HASH.js" | sort -u)
 
 ASSET_COUNT=0
+ASSET_SKIP=0
 for ASSET_PATH in $ASSET_PATHS; do
   FILENAME=$(basename "$ASSET_PATH")
   echo "    Downloading $FILENAME..."
-  curl -sf "$FIGMA_SITE/$ASSET_PATH" \
-    -o "$REPO_DIR/_components/v2/$NEW_HASH/$FILENAME"
-  ASSET_COUNT=$((ASSET_COUNT + 1))
+  HTTP_CODE=$(curl -s -o "$REPO_DIR/_components/v2/$NEW_HASH/$FILENAME" \
+    -w "%{http_code}" "$FIGMA_SITE/$ASSET_PATH")
+  if [ "$HTTP_CODE" != "200" ]; then
+    echo "    WARNING: $FILENAME returned HTTP $HTTP_CODE — skipping"
+    rm -f "$REPO_DIR/_components/v2/$NEW_HASH/$FILENAME"
+    ASSET_SKIP=$((ASSET_SKIP + 1))
+  else
+    ASSET_COUNT=$((ASSET_COUNT + 1))
+  fi
 done
 
-echo "    $ASSET_COUNT asset(s) downloaded"
+echo "    $ASSET_COUNT asset(s) downloaded, $ASSET_SKIP skipped"
 
 # Download updated bundle JSON
 echo "==> Downloading bundle JSON..."
