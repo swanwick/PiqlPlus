@@ -7,7 +7,7 @@ globalThis.__GLOBALS__.React.cloneElement;
 ({
   ...globalThis.__GLOBALS__.React
 });
-const { Component: W, createContext: O, createElement: b, createFactory: V, createRef: H, forwardRef: w, Fragment: U, isValidElement: $, lazy: z, memo: G, Profiler: D, PureComponent: Y, startTransition: Z, StrictMode: X, Suspense: J, use: K, useCallback: Q, useContext: ee, useDebugValue: te, useDeferredValue: ae, useEffect: v, useId: le, useImperativeHandle: se, useInsertionEffect: re, useLayoutEffect: oe, useMemo: ie, useReducer: ne, useRef: de, useState: x, useSyncExternalStore: ce, useTransition: me, version: he, __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED: fe } = globalThis.__GLOBALS__.React, g = "/_components/v2/f4af732284b4c7d2c8b1acb225c640c117e320f7/PiqlPlus_logo_w_ball.png", k = "/_components/v2/f4af732284b4c7d2c8b1acb225c640c117e320f7/Private_Pickle_Cleaned_Up.aada27fe.png", d = "/_components/v2/f4af732284b4c7d2c8b1acb225c640c117e320f7/Piql_logo_no_ball.00dc0086.png", C = "/_components/v2/f4af732284b4c7d2c8b1acb225c640c117e320f7/image-2.1a115305.png";
+const { Component: W, createContext: O, createElement: b, createFactory: U, createRef: H, forwardRef: w, Fragment: V, isValidElement: z, lazy: $, memo: G, Profiler: D, PureComponent: Y, startTransition: Z, StrictMode: X, Suspense: J, use: K, useCallback: Q, useContext: ee, useDebugValue: te, useDeferredValue: ae, useEffect: v, useId: le, useImperativeHandle: se, useInsertionEffect: re, useLayoutEffect: oe, useMemo: ie, useReducer: ne, useRef: de, useState: x, useSyncExternalStore: ce, useTransition: me, version: he, __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED: fe } = globalThis.__GLOBALS__.React, g = "/_components/v2/3f161a03fdea4886bd1b86152ce038f3aa8df38c/PiqlPlus_logo_w_ball.fb9023ed.png", k = "/_components/v2/3f161a03fdea4886bd1b86152ce038f3aa8df38c/Private_Pickle_Cleaned_Up.aada27fe.png", d = "/_components/v2/3f161a03fdea4886bd1b86152ce038f3aa8df38c/Piql_logo_no_ball.00dc0086.png", C = "/_components/v2/3f161a03fdea4886bd1b86152ce038f3aa8df38c/image-2.1a115305.png";
 /**
  * @license lucide-react v0.487.0 - ISC
  *
@@ -117,11 +117,11 @@ const R = [
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const I = [
+const L = [
   ["path", { d: "M18 6 6 18", key: "1bl5f8" }],
   ["path", { d: "m6 6 12 12", key: "d8bk6v" }]
-], E = p("x", I);
-function L() {
+], I = p("x", L);
+function E() {
   const [a, l] = x(""), [s, o] = x(!1);
   v(() => {
     const i = () => {
@@ -150,7 +150,7 @@ function L() {
                 className: `flex items-baseline gap-1 text-sm font-semibold tracking-wide transition-colors pb-1 border-b-2 group ${a === "private-pickle" ? "border-[#8BC34A]" : "border-transparent hover:border-[#8BC34A]"}`,
                 children: [
                   /* @__PURE__ */ e("img", { src: d, alt: "Piql", className: "h-4 object-contain" }),
-                  /* @__PURE__ */ e("span", { className: `transition-colors ${a === "private-pickle" ? "text-[#8BC34A]" : "text-[#001f3f] group-hover:text-[#8BC34A]"}`, children: "PRIVATE" })
+                  /* @__PURE__ */ e("span", { className: `transition-colors ${a === "private-pickle" ? "text-[#8BC34A]" : "text-[#001f3f] group-hover:text-[#8BC34A]"}`, children: "PLUS" })
                 ]
               }
             ),
@@ -188,7 +188,7 @@ function L() {
           {
             onClick: () => o(!s),
             className: "lg:hidden text-[#001f3f] p-2",
-            children: s ? /* @__PURE__ */ e(E, { size: 24 }) : /* @__PURE__ */ e(S, { size: 24 })
+            children: s ? /* @__PURE__ */ e(I, { size: 24 }) : /* @__PURE__ */ e(S, { size: 24 })
           }
         )
       ] }) }),
@@ -269,13 +269,13 @@ function L() {
       /* @__PURE__ */ t("div", { className: "flex items-center justify-between gap-2 sm:gap-4 mb-12", children: [
         /* @__PURE__ */ t("div", { className: "flex items-center gap-2 sm:gap-3", children: [
           /* @__PURE__ */ e("img", { src: d, alt: "Piql", className: "h-10 sm:h-14 md:h-16 lg:h-20 object-contain self-center" }),
-          /* @__PURE__ */ e("h2", { className: "text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-[#8BC34A] leading-none", style: { fontFamily: "Bebas Neue, sans-serif" }, children: "PRIVATE" })
+          /* @__PURE__ */ e("h2", { className: "text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-[#8BC34A] leading-none", style: { fontFamily: "Bebas Neue, sans-serif" }, children: "PLUS app" })
         ] }),
         /* @__PURE__ */ e("img", { src: k, alt: "Private Pickle", className: "h-12 sm:h-16 md:h-20 flex-shrink-0" })
       ] }),
       /* @__PURE__ */ e("div", { id: "who-its-for", className: "mb-20 scroll-mt-24", children: /* @__PURE__ */ t("div", { className: "bg-gradient-to-br from-[#8BC34A]/15 to-[#8BC34A]/5 rounded-3xl p-8 sm:p-12 border border-[#8BC34A]/20 shadow-sm", children: [
         /* @__PURE__ */ e("h3", { className: "text-3xl sm:text-4xl font-bold text-[#001f3f] mb-6", style: { fontFamily: "Bebas Neue, sans-serif" }, children: "Who It's For" }),
-        /* @__PURE__ */ e("p", { className: "text-lg text-gray-700 leading-relaxed mb-6", children: "Anyone who has struggled with putting together their own private pickleball games.  The app helps you collect all your pickleball contacts and find more players through your friends. It does all the text sending and RSVP management for you." }),
+        /* @__PURE__ */ e("p", { className: "text-lg text-gray-700 leading-relaxed mb-6", children: "This app will help you...Grow your game.   That means finding new people to play with, games are easier to organize, and you can get feedback on your play from your friends. Anyone who has struggled with the logistics of organizing private pickleball games.  Anyone who would love to hear from their friends what they should work on.  Anyone who wants to extend their network of pickleball friends.  This app can help.  The app helps you collect all your pickleball contacts and find more players through your friends. It does all the text sending and RSVP management for you." }),
         /* @__PURE__ */ e("p", { className: "text-lg text-gray-700 leading-relaxed mb-6", children: "Automatically sends the first invites to the players you most want in your game." }),
         /* @__PURE__ */ e("p", { className: "text-lg text-gray-700 leading-relaxed mb-6", children: "If you would like to try it, taking a 2 minute Pre sign-up survey will get you a free account." }),
         /* @__PURE__ */ e("a", { href: "https://private.piqlplus.com/AlphaSurvey", target: "_blank", rel: "noopener noreferrer", className: "inline-block px-6 py-3 bg-[#8BC34A] text-white font-semibold rounded-full hover:bg-[#7CB342] transition-all shadow-sm hover:shadow", children: "Take Pre Sign-up Survey" })
@@ -284,7 +284,7 @@ function L() {
         /* @__PURE__ */ t("div", { className: "bg-gradient-to-br from-[#8BC34A]/20 to-[#8BC34A]/5 rounded-3xl p-8 sm:p-12 border border-[#8BC34A]/30 shadow-sm", children: [
           /* @__PURE__ */ e("h3", { className: "text-3xl sm:text-4xl font-bold text-[#8BC34A] mb-6", style: { fontFamily: "Bebas Neue, sans-serif" }, children: "Alpha Test Status" }),
           /* @__PURE__ */ e("p", { className: "text-lg text-gray-700 leading-relaxed mb-6", children: "We are currently in Alpha Testing. This means that there will be bugs and there will be changes to the app during the Alpha phase. Alpha testers are encouraged to point out bugs and to make feature requests. We will fix problems and seek to improve the app before we get to a wider Beta." }),
-          /* @__PURE__ */ e("p", { className: "text-lg text-gray-700 leading-relaxed", children: "You can use the Bug or Lightbulb icons from the profile page within the app or come here and click on the appropriate link for what you want to report." })
+          /* @__PURE__ */ e("p", { className: "text-lg text-gray-700 leading-relaxed", children: "You can use the Bug Report or Feature Request options from the main menu within the app or come here and click on the appropriate link for what you want to report." })
         ] }),
         /* @__PURE__ */ t("div", { className: "space-y-8", children: [
           /* @__PURE__ */ t("div", { className: "bg-gradient-to-br from-[#8BC34A]/10 to-white rounded-3xl p-8 border border-[#8BC34A]/20 hover:border-[#8BC34A]/40 transition-all shadow-sm hover:shadow-md", children: [
@@ -468,7 +468,7 @@ function L() {
 }
 const j = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: L
+  default: E
 }, Symbol.toStringTag, { value: "Module" }));
 export {
   M as Code0_8
